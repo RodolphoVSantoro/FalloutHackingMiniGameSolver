@@ -62,10 +62,6 @@ int main(int argc, char *argv[]) {
         // asks its similarity given by the game
         printf("How similar did the game say the attempt was?\n");
         scanf("%d", &similarityFromGame);
-        if (similarityFromGame == strlen(attempt[attemptAmount])) {
-            printf("The password is %s\n", attempt[attemptAmount]);
-            break;
-        }
 
         // remove strings that don't have the same similarity as the attempt from the array of possible passwords
         filterBySimilarity(attempt[attemptAmount], passwords, &possibleCorrectAmount, similarityFromGame);
